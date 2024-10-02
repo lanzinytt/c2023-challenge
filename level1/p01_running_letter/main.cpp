@@ -9,10 +9,15 @@ int ClearConsole() {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo(hConsole, &csbi);
     DWORD dwConSize =csbi.dwSize.X *csbi.dwSize.Y;  // 控制台的缓冲区大小
-
+    DWORD count;
     // 填充整个屏幕缓冲区
     FillConsoleOutputCharacter(hConsole, ' ', dwConSize, {0, 0}, &dwConSize);
     FillConsoleOutputAttribute(hConsole, csbi.wAttributes, dwConSize, {0, 0}, &dwConSize);
+    FillConsoleOutputCharacter(hConsole, ' ', dwConSize, {0, 1}, &dwConSize);
+    FillConsoleOutputAttribute(hConsole, csbi.wAttributes, dwConSize, {0, 1}, &dwConSize);
+    FillConsoleOutputCharacter(hConsole, ' ', dwConSize, {0, 2}, &dwConSize);
+    FillConsoleOutputAttribute(hConsole, csbi.wAttributes, dwConSize, {0, 2}, &dwConSize);
+    
     SetConsoleCursorPosition(hConsole, {0, 0});
     if(csbi.dwSize.X>10){
         return csbi.dwSize.X;
@@ -27,6 +32,7 @@ int main (){
     bool flag=true;
     int dis=0;
     while(time<1000){
+        WIDTH=ClearConsole();
         if(flag){
             dis=time%WIDTH;
         }else{
@@ -41,7 +47,7 @@ int main (){
             flag=not flag;
         }
         Sleep(100);
-        WIDTH=ClearConsole();
+        
         
     }
     return 0;
