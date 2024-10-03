@@ -5,7 +5,7 @@
 #include <windows.h>
 using namespace std;
 
-#define WIDTH 10
+#define WIDTH 20
 #define HEIGHT 10
 
 int direct[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
@@ -129,7 +129,7 @@ void judge_move(player* p){
 bool judge_win(player* p){
     extern int end_x;
     extern int end_y;
-    if(p->x== end_x && p->y == end_y){
+    if(p->x== end_x ){
         return false;
     }
     return true;
