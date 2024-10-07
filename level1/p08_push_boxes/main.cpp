@@ -1,6 +1,5 @@
-#include "initial.h"
+#include "game.h"
 
-int main() {
-    game();
-    return 0;
+int main(){
+    Easy();
 }
