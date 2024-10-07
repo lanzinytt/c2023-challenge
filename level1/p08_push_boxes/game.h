@@ -5,7 +5,7 @@
 #include <fstream>
 #include "tools.h"
 #include <windows.h>
-void Easy();
-void normal();
-void hard();
+void Easy(int argc,char *argv[]);
+void normal(int argc,char *argv[]);
+void hard(int argc,char *argv[]);
 #endif

@@ -11,9 +11,17 @@ typedef struct player{
     int y;
 }player;
 
-void Easy(){
+void Easy(int argc,char *argv[]){
     json j;
-    ifstream jfile("./maze.json");
+    if(argc ==1){
+        ifstream jfile("./maze.json");
+        jfile >> j;      
+    }else if(argc==2){
+        ifstream jfile(argv[1]);
+        jfile >> j;
+    }else{
+        cout<<"WARNING";
+    }
     int m_size=j["Easy"]["size"];
     int map[m_size][m_size];
     for(int i=0;i<m_size;i++){
@@ -89,9 +97,17 @@ void Easy(){
     free(p);   
 }
 
-void normal(){
+void normal(int argc,char *argv[]){
     json j;
-    ifstream jfile("./maze.json");
+    if(argc ==1){
+        ifstream jfile("./maze.json");
+        jfile >> j;      
+    }else if(argc==2){
+        ifstream jfile(argv[1]);
+        jfile >> j;
+    }else{
+        cout<<"WARNING";
+    }
     int m_size=j["Normal"]["size"];
     int map[m_size][m_size];
     for(int i=0;i<m_size;i++){
@@ -167,9 +183,17 @@ void normal(){
     free(p); 
 }
 
-void hard(){
+void hard(int argc,char *argv[]){
     json j;
-    ifstream jfile("./maze.json");
+    if(argc ==1){
+        ifstream jfile("./maze.json");
+        jfile >> j;      
+    }else if(argc==2){
+        ifstream jfile(argv[1]);
+        jfile >> j;
+    }else{
+        cout<<"WARNING";
+    }
     int m_size=j["Hard"]["size"];
     int map[m_size][m_size];
     for(int i=0;i<m_size;i++){
