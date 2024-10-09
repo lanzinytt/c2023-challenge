@@ -5,7 +5,9 @@
 #include <fstream>
 #include "tools.h"
 #include <windows.h>
-void Easy(int argc,char *argv[]);
+using json = nlohmann::json;
+using namespace std;
+void Easy(json j);
 void normal(int argc,char *argv[]);
 void hard(int argc,char *argv[]);
 #endif

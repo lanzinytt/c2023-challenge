@@ -8,7 +8,7 @@ _Bool is_prime(int n){
         return flag;
     }
     if(n%2==0){
-        return not flag;
+        return flag==true;
     }
     for(int i=3;i<ran+1;i+=2){
         if(n%i==0){
