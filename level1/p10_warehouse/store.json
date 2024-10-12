@@ -1,6 +1,6 @@
 {
     "store":{
-        "item":{
+        "items":{
             "orange":{
                 "prize":30,
                 "amount":10
@@ -28,6 +28,6 @@
                 "amount":100
             }
         }
-
-    }
+    },
+    "cmd":["in","out","quit"]
 }

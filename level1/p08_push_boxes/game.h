@@ -8,6 +8,6 @@
 using json = nlohmann::json;
 using namespace std;
 void Easy(json j);
-void normal(int argc,char *argv[]);
-void hard(int argc,char *argv[]);
+void normal(json j);
+void hard(json j);
 #endif
