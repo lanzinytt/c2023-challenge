@@ -4,11 +4,11 @@
 #include <string>
 #include <typeinfo>
 #include <windows.h>
+#include "tools.h"
 using json=nlohmann::json;
 using namespace std;
-int const CONSIZE=100;
 
-void SetCursorPosition(const int x, const int y)//设置光标位置
+/*void SetCursorPosition(const int x, const int y)//设置光标位置
 {
     COORD position;
     position.X = x * 2;
@@ -67,14 +67,23 @@ void system(json j){
         if(cmd=="quit"){
             cout<<"system quiting";
             exit(1);
-        }else{
-            cin>>item>>num;
+        }else {
+            cin>>item;
+            scanf("%d",&num);
             if(cmd=="in"){
-                int temp=num+(int)j["store"]["items"][item]["amount"];
-                j["store"]["items"][item]["amount"]=temp;
+                if((item=="orange" || item =="apple" || item =="banana")){
+                    int temp=num+(int)j["store"]["items"][item]["amount"];
+                    j["store"]["items"][item]["amount"]=temp;
+                }else{
+                    continue;
+                }
             }else if(cmd=="out"){
-                int temp=(int)j["store"]["items"][item]["amount"]-num;
-                j["store"]["items"][item]["amount"]=temp;
+                if((item=="orange" || item =="apple" || item =="banana")){
+                    int temp=(int)j["store"]["items"][item]["amount"]-num;
+                    j["store"]["items"][item]["amount"]=temp;
+                }else{
+                    continue;
+                }
             }else{
                 cout<<"undefine cmd!!";
                 continue;
@@ -82,7 +91,7 @@ void system(json j){
         }    
     }
 }
-
+*/
 int main(int argc,char *argv[]) {
     string jsonname="./store.json";
     json j=load_json(argc,argv,jsonname);
