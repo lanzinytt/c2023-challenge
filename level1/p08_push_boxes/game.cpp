@@ -3,6 +3,7 @@
 #include <fstream>
 #include "tools.h"
 #include <windows.h>
+#include "game.h"
 using json = nlohmann::json;
 using namespace std;
 
@@ -10,6 +11,23 @@ typedef struct player{
     int x;
     int y;
 }player;
+
+json read_maze(int argc,char *argv[]){
+    json j;
+    if(argc ==1){
+        ifstream jfile("./maze.json");
+        jfile >> j;      
+    }else if(argc==2){
+        ifstream jfile(argv[1]);
+        jfile >> j;
+    }else{
+        cout<<"WARNING";
+    }
+    return j;
+}
+
+
+
 
 void Easy(json j){
     int m_size=j["Easy"]["size"];
