@@ -81,7 +81,11 @@ public:
     void search(int key){
         Node* cur=head;
         int depth=MAX_DEPTH-1;
-        while(cur->next[depth]!=nullptr && cur->next[depth]->data!=key){
+        while(depth>=0 && not(cur->next[depth]!=nullptr && cur->next[depth]->data==key)){
+            if(cur->next[depth]==nullptr){
+                depth--;
+                continue;
+            }
             if(cur->next[depth]->data<key){
                 cur=cur->next[depth];
             }else{

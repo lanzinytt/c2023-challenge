@@ -1,4 +1,6 @@
-#include <iostream>
+//这个是废稿，没成功
+
+/*#include <iostream>
 #include <ctime>
 const int MAX_DEPTH=4;
 
@@ -108,4 +110,4 @@ int main(){
     lst.insert(3);
     lst.insert(2);
     lst.search(2);
-}
+}*/
