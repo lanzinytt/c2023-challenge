@@ -7,7 +7,7 @@
 #include <windows.h>
 using json = nlohmann::json;
 using namespace std;
-void Easy(json j);
+void easy(json j);
 void normal(json j);
 void hard(json j);
 #endif
