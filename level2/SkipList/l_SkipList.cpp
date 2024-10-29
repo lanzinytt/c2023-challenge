@@ -28,6 +28,15 @@ public:
     SkipList(){
         head=new Node(0);
     }
+    ~SkipList(){
+        Node* p=head;
+        Node* q=nullptr;
+        while(p->next[0]!=nullptr){
+            q=p->next[0];
+            delete(p);
+            p=q;
+        }delete(p);
+    }
     void insert(int data){
         if(data<0){
             cout<<"don't accept -num";
@@ -66,17 +75,22 @@ public:
         }
     }
     void del(int key){
+        Node* forward=nullptr;
         for(int i=0;i<MAX_DEPTH;i++){
             Node* cur=head;
             while(cur->next[i]!=nullptr && cur->next[i]->data!=key){
                 cur=cur->next[i];
             }
             if(cur->next[i]!=nullptr && cur->next[i]->data==key){
-                Node* forward=cur->next[i];
+                forward=cur->next[i];
                 cur->next[i]=cur->next[i]->next[i];
-                delete forward;
             }
+            
         }
+        if(forward!=nullptr){
+            delete(forward);
+        }
+        
     }
     void search(int key){
         Node* cur=head;
