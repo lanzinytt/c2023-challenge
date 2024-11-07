@@ -408,7 +408,7 @@ class main:
     def clearPainter(self):
         self.hd.clear_canvas()
     def writeOCR(self):
-        deleteFolder=r'D:\PGMCode\Mycode\pythonCode\voice_txt\goodTools\materialFolder'    !!!! #注意这里路径
+        deleteFolder=r'D:\PGMCode\Mycode\pythonCode\voice_txt\goodTools\materialFolder'    #!!!! #注意这里路径
         self.deleteAllFile(deleteFolder)
         # 每次保存图像前清空文件夹
         picPath=self.setPicPath()
@@ -509,7 +509,7 @@ class main:
                 showLog(f"删除文件时出错: {file}, 错误信息: {e.strerror}")
     def writeRecongnize(self):
         # 在生成新截图之前删除所有截图,以免一直占用空间
-        deleteFolder=r'D:\PGMCode\Mycode\pythonCode\voice_txt\goodTools\materialFolder'    !!!! #注意这里路径
+        deleteFolder=r'D:\PGMCode\Mycode\pythonCode\voice_txt\goodTools\materialFolder'    #!!!! #注意这里路径
         self.deleteAllFile(deleteFolder)
         self.clearText()
         self.labelShow("状态:截图图片并识别")
