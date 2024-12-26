@@ -1,0 +1,10 @@
+release/gameboard.o
+release/gobanglogic.o
+release/junction.o
+release/main.o
+release/selfchess.o
+release/widget.o
+release/moc_gameboard.o
+release/moc_junction.o
+release/moc_selfchess.o
+release/moc_widget.o

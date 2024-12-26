@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/">
+        <file>interaction source/picture/R-C-001.ico</file>
+        <file>interaction source/picture/th.jpg</file>
+        <file>interaction source/picture/th2.png</file>
+        <file>interaction source/picture/board.png</file>
+        <file>interaction source/picture/board-p.png</file>
+        <file>interaction source/picture/th3.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+debug/gameboard.o
+debug/gobanglogic.o
+debug/junction.o
+debug/main.o
+debug/selfchess.o
+debug/widget.o
+debug/moc_gameboard.o
+debug/moc_junction.o
+debug/moc_selfchess.o
+debug/moc_widget.o

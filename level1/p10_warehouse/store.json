@@ -1,0 +1,33 @@
+{
+    "store":{
+        "items":{
+            "orange":{
+                "prize":30,
+                "amount":10
+            },
+            "banana":{
+                "prize":15,
+                "amount":10
+            },
+            "apple":{
+                "prize":20,
+                "amount":10
+            }
+        },
+        "itemtype":["orange","banana","apple"]
+    },
+    "warehouse":{
+        "item":{
+            "orange":{
+                "amount":100
+            },
+            "banana":{
+                "amount":100
+            },
+            "apple":{
+                "amount":100
+            }
+        }
+    },
+    "cmd":["in","out","quit"]
+}
